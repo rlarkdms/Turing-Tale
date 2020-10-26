@@ -6,8 +6,8 @@ from pygame import *
 import pygame,sys
 
 s3=boto3.client('s3',
-   aws_access_key_id='AKIA25U5UVIVD3P7ZDU4',
-   aws_secret_access_key='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')
+   aws_access_key_id='',
+   aws_secret_access_key='')
 
 arr1=[]
 arr2=[]
@@ -17,28 +17,28 @@ arr5=[]
 arr6=[]
 
 count=0
-for object in s3.list_objects(Bucket='crawlingnewsmp3test')['Contents']:
-    s3.download_file('crawlingnewsmp3test', object['Key'], object['Key'])
+for object in s3.list_objects(Bucket='')['Contents']:
+    s3.download_file('', object['Key'], object['Key'])
     arr1.append(object['Key'])
 
-for object in s3.list_objects(Bucket='crawlingnewstexttest')['Contents']:
-    s3.download_file('crawlingnewstexttest', object['Key'], object['Key'])
+for object in s3.list_objects(Bucket='')['Contents']:
+    s3.download_file('', object['Key'], object['Key'])
     arr2.append(object['Key'])
 
-for object in s3.list_objects(Bucket='crawlingfairymp3test')['Contents']:
-    s3.download_file('crawlingfairymp3test', object['Key'], object['Key'])
+for object in s3.list_objects(Bucket='')['Contents']:
+    s3.download_file('', object['Key'], object['Key'])
     arr3.append(object['Key'])
 
-for object in s3.list_objects(Bucket='crawlingfairytexttest')['Contents']:
-    s3.download_file('crawlingfairytexttest', object['Key'], object['Key'])
+for object in s3.list_objects(Bucket='')['Contents']:
+    s3.download_file('', object['Key'], object['Key'])
     arr4.append(object['Key'])
 
-for object in s3.list_objects(Bucket='translatemp3test')['Contents']:
-    s3.download_file('translatemp3test', object['Key'], object['Key'])
+for object in s3.list_objects(Bucket='')['Contents']:
+    s3.download_file('', object['Key'], object['Key'])
     arr5.append(object['Key'])
 
-for object in s3.list_objects(Bucket='translatetexttest')['Contents']:
-    s3.download_file('translatetexttest', object['Key'], object['Key'])
+for object in s3.list_objects(Bucket='')['Contents']:
+    s3.download_file('', object['Key'], object['Key'])
     arr6.append(object['Key'])
 
 #until this line is upload text and mp3 file.
