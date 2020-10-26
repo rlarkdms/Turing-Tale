@@ -37,13 +37,13 @@ for j in range(len(newstitle)-12):
     realti=realti+newstitle[j]
 
 s3=boto3.client('s3',
-    aws_access_key_id='AKIA25U5UVIVD3P7ZDU4',
-    aws_secret_access_key='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')
+    aws_access_key_id='',
+    aws_secret_access_key='')
 
 
 polly=boto3.Session(
-    aws_access_key_id='AKIA25U5UVIVD3P7ZDU4',
-    aws_secret_access_key='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',
+    aws_access_key_id='',
+    aws_secret_access_key='',
     region_name='us-east-1').client('polly')
 
 
@@ -110,6 +110,6 @@ with open('txt/'+realtitxt,'w') as f:
 #pycharm에서는 'w'로 실행해야 실행 가능함.
 
 print("realtitxt :",realtitxt)
-s3.upload_file('txt/'+realtitxt,'crawlingnewstexttest',realtitxt)
-s3.upload_file('mp3/'+realtimp3_woman,'crawlingnewsmp3test',realtimp3_woman)
-s3.upload_file('mp3/'+realtimp3_man,'crawlingnewsmp3test',realtimp3_man)
+s3.upload_file('txt/'+realtitxt,'',realtitxt)
+s3.upload_file('mp3/'+realtimp3_woman,'',realtimp3_woman)
+s3.upload_file('mp3/'+realtimp3_man,'',realtimp3_man)
