@@ -67,7 +67,7 @@ public class MainActivity extends AppCompatActivity {
         tedPermission();//permission보여주는 부분 False 일때만 계속 보여주고 True되면  가능
          CognitoCachingCredentialsProvider credentialsProvider = new CognitoCachingCredentialsProvider(
                  getApplicationContext(),
-                "us-east-1:17971bfd-0cd5-4f9b-8f3d-37f2bde670af", // Identity pool ID
+                "", // Identity pool ID
                 Regions.US_EAST_1 // Region
         );
          s3=new AmazonS3Client(credentialsProvider);
